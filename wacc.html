@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WACC Calculator</title>
+</head>
+<body>
+  <h1>WACC Calculator</h1>
+  <form action="/wacc" method="POST">
+    <label for="costOfEquity">Cost of Equity (in %):</label>
+    <input type="text" id="costOfEquity" name="costOfEquity"><br>
+
+    <label for="costOfDebt">Cost of Debt (in %):</label>
+    <input type="text" id="costOfDebt" name="costOfDebt"><br>
+
+    <label for="taxRate">Tax Rate (in %):</label>
+    <input type="text" id="taxRate" name="taxRate"><br>
+
+    <label for="equityWeight">Equity Weight:</label>
+    <input type="text" id="equityWeight" name="equityWeight"><br>
+
+    <label for="debtWeight">Debt Weight:</label>
+    <input type="text" id="debtWeight" name="debtWeight"><br>
+
+    <input type="submit" value="Calculate">
+  </form>
+</body>
+</html>
