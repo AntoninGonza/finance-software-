@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WACC Calculator</title>
+  <title>Finance society calculator</title>
 </head>
 <body>
-  <h1>WACC Calculator</h1>
+  <h1>Finance society calculator</h1>
+  <h2>WACC Calculation:</h2>
   <form action="/wacc" method="POST">
     <label for="costOfEquity">Cost of Equity (in %):</label>
     <input type="text" id="costOfEquity" name="costOfEquity"><br>
@@ -21,7 +22,38 @@
     <label for="debtWeight">Debt Weight:</label>
     <input type="text" id="debtWeight" name="debtWeight"><br>
 
-    <input type="submit" value="Calculate">
+    <input type="submit" value="Calculate WACC">
+  </form>
+
+  <h2>NPV Calculation:</h2>
+  <form action="/NPV" method="POST">
+    <label for="costOfProject">Cost of Project:</label>
+    <input type="text" id="costOfProject" name="costOfProject"><br>
+
+    <label for="RevenueYear1">Revenue Year 1:</label>
+    <input type="text" id="RevenueYear1" name="RevenueYear1"><br>
+
+    <label for="RevenueYear2">Revenue Year 2:</label>
+    <input type="text" id="RevenueYear2" name="RevenueYear2"><br>
+
+    <label for="RevenueYear3">Revenue Year 3:</label>
+    <input type="text" id="RevenueYear3" name="RevenueYear3"><br>
+
+    <label for="RevenueYear4">Revenue Year 4:</label>
+    <input type="text" id="RevenueYear4" name="RevenueYear4"><br>
+
+    <label for="discountRate">Discount Rate (in %):</label>
+    <input type="text" id="discountRate" name="discountRate"><br>
+
+    <input type="submit" value="Calculate NPV">
+  </form>
+
+  <h2>IRR Calculation:</h2>
+  <form action="/IRR" method="POST">
+    <label for="cashFlows">Cash Flows (comma-separated):</label>
+    <input type="text" id="cashFlows" name="cashFlows"><br>
+
+    <input type="submit" value="Calculate IRR">
   </form>
 </body>
 </html>
