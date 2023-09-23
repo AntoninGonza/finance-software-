@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bond calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>Bond Price Calculation:</h2>
+  <form action="/bond" method="POST">
+    <label for="faceValue">Face Value:</label>
+    <input type="text" id="faceValue" name="faceValue"><br>
+
+    <label for="couponRate">Coupon Rate (in %):</label>
+    <input type="text" id="couponRate" name="couponRate"><br>
+
+    <label for="yearsToMaturity">Years to Maturity:</label>
+    <input type="text" id="yearsToMaturity" name="yearsToMaturity"><br>
+
+    <label for="discountRate">Discount Rate (in %):</label>
+    <input type="text" id="discountRate" name="discountRate"><br>
+
+    <input type="submit" value="Calculate Bond Price">
+  </form>
+</body>
+</html>

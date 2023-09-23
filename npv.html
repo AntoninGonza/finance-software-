@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPV calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>NPV Calculation:</h2>
+  <form action="/NPV" method="POST">
+    <label for="costOfProject">Cost of Project:</label>
+    <input type="text" id="costOfProject" name="costOfProject"><br>
+
+    <label for="RevenueYear1">Revenue Year 1:</label>
+    <input type="text" id="RevenueYear1" name="RevenueYear1"><br>
+
+    <label for="RevenueYear2">Revenue Year 2:</label>
+    <input type="text" id="RevenueYear2" name="RevenueYear2"><br>
+
+    <label for="RevenueYear3">Revenue Year 3:</label>
+    <input type="text" id="RevenueYear3" name="RevenueYear3"><br>
+
+    <label for="RevenueYear4">Revenue Year 4:</label>
+    <input type="text" id="RevenueYear4" name="RevenueYear4"><br>
+
+    <label for="discountRate">Discount Rate (in %):</label>
+    <input type="text" id="discountRate" name="discountRate"><br>
+
+    <input type="submit" value="Calculate NPV">
+  </form>
+</body>
+</html>

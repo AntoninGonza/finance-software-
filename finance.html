@@ -1,76 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Finance Society Calculator</title>
+  <title>Finance Society Software</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* CSS styles for centering content and button stacking */
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px; /* Adjust the font size as needed */
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .button-container a {
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Finance Society Calculator</h1>
-  <h2>WACC Calculation:</h2>
-  <form action="/wacc" method="POST">
-    <label for="costOfEquity">Cost of Equity (in %):</label>
-    <input type="text" id="costOfEquity" name="costOfEquity"><br>
-
-    <label for="costOfDebt">Cost of Debt (in %):</label>
-    <input type="text" id="costOfDebt" name="costOfDebt"><br>
-
-    <label for="taxRate">Tax Rate (in %):</label>
-    <input type="text" id="taxRate" name="taxRate"><br>
-
-    <label for="equityWeight">Equity Weight:</label>
-    <input type="text" id="equityWeight" name="equityWeight"><br>
-
-    <label for="debtWeight">Debt Weight:</label>
-    <input type="text" id="debtWeight" name="debtWeight"><br>
-
-    <input type="submit" value="Calculate WACC">
-  </form>
-
-  <h2>NPV Calculation:</h2>
-  <form action="/NPV" method="POST">
-    <label for="costOfProject">Cost of Project:</label>
-    <input type="text" id="costOfProject" name="costOfProject"><br>
-
-    <label for="RevenueYear1">Revenue Year 1:</label>
-    <input type="text" id="RevenueYear1" name="RevenueYear1"><br>
-
-    <label for="RevenueYear2">Revenue Year 2:</label>
-    <input type="text" id="RevenueYear2" name="RevenueYear2"><br>
-
-    <label for="RevenueYear3">Revenue Year 3:</label>
-    <input type="text" id="RevenueYear3" name="RevenueYear3"><br>
-
-    <label for="RevenueYear4">Revenue Year 4:</label>
-    <input type="text" id="RevenueYear4" name="RevenueYear4"><br>
-
-    <label for="discountRate">Discount Rate (in %):</label>
-    <input type="text" id="discountRate" name="discountRate"><br>
-
-    <input type="submit" value="Calculate NPV">
-  </form>
-
-  <h2>IRR Calculation:</h2>
-  <form action="/IRR" method="POST">
-    <label for="cashFlows">Cash Flows (comma-separated):</label>
-    <input type="text" id="cashFlows" name="cashFlows"><br>
-
-    <input type="submit" value="Calculate IRR">
-  </form>
-
-  <h2>Bond Price Calculation:</h2>
-  <form action="/bond" method="POST">
-    <label for="faceValue">Face Value:</label>
-    <input type="text" id="faceValue" name="faceValue"><br>
-
-    <label for="couponRate">Coupon Rate (in %):</label>
-    <input type="text" id="couponRate" name="couponRate"><br>
-
-    <label for="yearsToMaturity">Years to Maturity:</label>
-    <input type="text" id="yearsToMaturity" name="yearsToMaturity"><br>
-
-    <label for="discountRate">Discount Rate (in %):</label>
-    <input type="text" id="discountRate" name="discountRate"><br>
-
-    <input type="submit" value="Calculate Bond Price">
-  </form>
+  <h1 style="font-size: 48px;">Finance Society Software</h1> <!-- Adjust the font size as needed -->
+  <div class="button-container">
+    <a href="wacc.html"><button>WACC Calculator</button></a>
+    <a href="npv.html"><button>NPV Calculator</button></a>
+    <a href="irr.html"><button>IRR Calculator</button></a>
+    <a href="bond.html"><button>Bond Calculator</button></a>
+    <a href="firmvalue.html"><button>Firm Value Calculator</button></a>
+  </div>
 </body>
 </html>

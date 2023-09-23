@@ -1,14 +1,52 @@
+//Firm value = (Assets - Debt) + (FCF - Env Expenses)^n / WACC 
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path'); 
+
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get(
+  ["/*.jpg", "/*.png", "/*.css", "/*.html", "/*.js", "/*.jpeg", "/*.gif"],
+  function (req, res) {
+    res.sendFile(path.join(__dirname, req.path));
+  }
+);
+
+
 // Serve the finance.html file when accessing the root route
 app.get('/', (req, res) => {
   res.sendFile('finance.html', { root: __dirname });
+});
+
+// Serve the WACC calculator HTML page
+app.get('/wacc', (req, res) => {
+  res.sendFile('wacc.html', { root: __dirname });
+});
+
+// Serve the NPV calculator HTML page
+app.get('/npv', (req, res) => {
+  res.sendFile('npv.html', { root: __dirname });
+});
+
+// Serve the IRR calculator HTML page
+app.get('/irr', (req, res) => {
+  res.sendFile('irr.html', { root: __dirname });
+});
+
+// Serve the Bond calculator HTML page
+app.get('/bond', (req, res) => {
+  res.sendFile('bond.html', { root: __dirname });
+});
+
+// Serve the Firm Value calculator HTML page
+app.get('/firmvalue', (req, res) => {
+  res.sendFile('firmvalue.html', { root: __dirname });
 });
 
 // Handle form submission and calculate WACC
@@ -29,6 +67,7 @@ app.post('/NPV', (req, res) => {
   // Send the NPV result to a new page
   res.send(`The NPV is $${NPV}`);
 });
+
 
 // Handle form submission and calculate IRR
 app.post('/IRR', (req, res) => {
@@ -90,4 +129,11 @@ app.post('/bond', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
+});
+
+app.post('/firmValue', (req, res) => {
+  const { asset, debt, FCF, envExpenses, WACC, n} = req.body;
+  const firmValue = ((asset - debt) + Math.pow(FCF - envExpenses, n)) / WACC 
+  // Send the NPV result to a new page
+  res.send(`The firm's value is $${firmValue}`);
 });

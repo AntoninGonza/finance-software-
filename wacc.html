@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WACC calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>WACC Calculation:</h2>
+  <form action="/wacc" method="POST">
+    <label for="costOfEquity">Cost of Equity (in %):</label>
+    <input type="text" id="costOfEquity" name="costOfEquity"><br>
+
+    <label for="costOfDebt">Cost of Debt (in %):</label>
+    <input type="text" id="costOfDebt" name="costOfDebt"><br>
+
+    <label for="taxRate">Tax Rate (in %):</label>
+    <input type="text" id="taxRate" name="taxRate"><br>
+
+    <label for="equityWeight">Equity Weight:</label>
+    <input type="text" id="equityWeight" name="equityWeight"><br>
+
+    <label for="debtWeight">Debt Weight:</label>
+    <input type="text" id="debtWeight" name="debtWeight"><br>
+
+    <input type="submit" value="Calculate WACC">
+  </form>
+    
+</body>
+</html>

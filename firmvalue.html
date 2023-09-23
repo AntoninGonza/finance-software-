@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firm value calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>Firm Value calculation:</h2>
+  <form action="/firmValue" method="POST">
+    <label for="asset">Firm's asset:</label>
+    <input type="text" id="asset" name="asset"><br>
+
+    <label for="debt">Firm's debt:</label>
+    <input type="text" id="debt" name="debt"><br>
+
+    <label for="FCF">Firm's FCF</label>
+    <input type="text" id="FCF" name="FCF"><br>
+
+    <label for="envExpenses">Firm's investment expenses</label>
+    <input type="text" id="envExpenses" name="envExpenses"><br>
+
+    <label for="WACC">Firm's WACC</label>
+    <input type="text" id="WACC" name="WACC"><br>
+
+    <label for="n">n</label>
+    <input type="text" id="n" name="n"><br>
+
+    <input type="submit" value="Calculate firmValue">
+  </form>
+</body>
+</html>
